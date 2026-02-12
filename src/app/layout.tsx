@@ -4,14 +4,14 @@ import "./globals.css";
 import { FloatingWhatsApp } from "../components/FloatingWhatsApp";
 
 // Configurando Fonte Serifada (Títulos)
-const playfair = Playfair_Display({ 
+const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
 });
 
 // Configurando Fonte Sans (Textos)
-const lato = Lato({ 
+const lato = Lato({
   subsets: ["latin"],
   weight: ["300", "400", "700"],
   variable: "--font-lato",
@@ -20,7 +20,13 @@ const lato = Lato({
 
 export const metadata: Metadata = {
   title: "Maria Laux | Massoterapia e Bem-estar em Sarandi",
-  description: "Revitalize seu corpo e mente com massagens terapêuticas, relaxantes e drenagem linfática. Agende sua sessão.",
+  description:
+    "Revitalize seu corpo e mente com massagens terapêuticas, relaxantes e drenagem linfática. Agende sua sessão.",
+  icons: {
+    icon: "/assets/logomaria.png",
+    shortcut: "/assets/logomaria.png",
+    apple: "/assets/logomaria.png",
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +36,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="scroll-smooth">
-      <body className={`${playfair.variable} ${lato.variable} bg-background text-text antialiased`}>
+      <body
+        className={`${playfair.variable} ${lato.variable} bg-background text-text antialiased`}
+      >
         {children}
         <FloatingWhatsApp />
       </body>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -36,12 +37,28 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
-        
-        <Link 
-          href="/" 
-          className={`font-serif text-2xl font-bold tracking-wide transition-colors ${textColor}`}
-        >
-          Maria Laux
+        {/* Logo + Nome */}
+        <Link href="/" className="flex items-center gap-4 group">
+          {/* Logo da Maria Laux */}
+          <div className="relative w-[60px] h-[60px] md:w-[60px] md:h-[60px] transition-transform group-hover:scale-110">
+            <Image
+              src="/assets/logomaria.png"
+              alt="Logo Maria Laux Massoterapia"
+              width={60}
+              height={60}
+              className={`object-contain scale-125 transition-all duration-300 ${
+                scrolled ? "brightness-0 opacity-80" : "brightness-100"
+              }`}
+              priority
+            />
+          </div>
+
+          {/* Nome */}
+          <span
+            className={`font-serif text-2xl md:text-2xl font-bold tracking-wide transition-colors ${textColor}`}
+          >
+            Maria Laux
+          </span>
         </Link>
 
         {/* Desktop Menu */}
@@ -65,7 +82,10 @@ export function Header() {
         </nav>
 
         {/* Mobile Toggle */}
-        <button className={`md:hidden ${textColor}`} onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className={`md:hidden ${textColor}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
