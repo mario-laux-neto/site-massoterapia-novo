@@ -1,0 +1,10 @@
+# Diretrina para todos os robôs
+User-agent: *
+Allow: /
+
+# Bloquear pastas que não precisam aparecer na busca (ex: se tiver um painel admin)
+Disallow: /api/
+Disallow: /admin/
+
+# Caminho oficial do seu mapa do site
+Sitemap: https://marialauxmasso.com.br/sitemap.xml
