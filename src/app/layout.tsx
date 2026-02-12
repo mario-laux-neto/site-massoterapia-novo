@@ -19,13 +19,23 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Maria Laux | Massoterapia e Bem-estar em Sarandi",
-  description:
-    "Revitalize seu corpo e mente com massagens terapêuticas, relaxantes e drenagem linfática. Agende sua sessão.",
+  title: "Maria Laux Massoterapeuta | Massoterapia e Bem-estar em Sarandi | Sarandi, RS",
+  description: "Revitalize seu corpo e mente com massagens terapêuticas, relaxantes e drenagem linfática. Agende sua sessão.",
   icons: {
     icon: "/assets/logomaria.png",
     shortcut: "/assets/logomaria.png",
     apple: "/assets/logomaria.png",
+  },
+  // ADICIONE ISSO AQUI:
+  openGraph: {
+    images: [
+      {
+        url: '/assets/logomaria3.png', // O seu ícone com fundo invisível
+        width: 1200,
+        height: 630,
+        alt: 'Maria Laux Massoterapia',
+      },
+    ],
   },
 };
 
