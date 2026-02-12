@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Fundo Circular (Verde Elegante) -->
+  <circle cx="256" cy="256" r="256" fill="#52796F"/>
+  
+  <!-- Iniciais ML -->
+  <!-- Fonte serifada para combinar com o site (Playfair Display style) -->
+  <text 
+    x="50%" 
+    y="55%" 
+    dominant-baseline="middle" 
+    text-anchor="middle" 
+    fill="#ffffff" 
+    font-family="'Playfair Display', serif" 
+    font-weight="bold" 
+    font-size="280"
+    dy=".1em"
+  >
+    ML
+  </text>
+</svg>
