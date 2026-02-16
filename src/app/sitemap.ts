@@ -1,5 +1,8 @@
 import { MetadataRoute } from 'next'
 
+// ADICIONE ESSA LINHA AQUI EMBAIXO 👇
+export const dynamic = 'force-static'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
@@ -8,6 +11,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 1,
     },
-    // Se tiver outras páginas no futuro (ex: /sobre), adicione aqui
   ]
 }
